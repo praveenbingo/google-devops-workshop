@@ -23,7 +23,7 @@ Remember the Service Types:
 * LoadBalancer
   * Service is reachable through an *external* load balancer mapped to `<NodeIP>:NodePort` address.
 
-Note: Creating a Service of type LoadBalancer, where the external load balancer is created in a Public Cloud (e.g., Azure), is not a very efficient way to get your applications to "talk" to the outside world. This is because every Service will create a new external load balancer, which is obviously an expensive proposition.
+Note: Creating a Service of type LoadBalancer, where the external load balancer is created in a Public Cloud (e.g., GCP), is not a very efficient way to get your applications to "talk" to the outside world. This is because every Service will create a new external load balancer, which is obviously an expensive proposition.
 
 ## What is an Ingress
 

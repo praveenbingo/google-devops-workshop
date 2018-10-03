@@ -157,11 +157,13 @@ Later when this app is deployed to Kubernetes, we will deploy `favorite-beer-con
 
 ## Exposing this Deployment
 
-Since this is a service that recieve traffic internally or otherwise over the net, we will need to expose an endpoint. This is where the Kubernetes `Service` comes into play. As you may remember, when we were discussing the primitives there are 3 types of services each more complex than the last, building up to `LoadBalancer`.
+Since this is a service that receive traffic internally or otherwise over the net, we will need to expose an endpoint. This is where the Kubernetes `Service` comes into play. As you may remember, when we were discussing the primitives there are 3 types of services each more complex than the last, building up to `LoadBalancer`.
 
-We can define a service for our deployment. If you already have a cluster running in AKS, you can speciy `type: LoadBalancer`, however on minikube you should use `NodePort`. This process executes iptables rules on every node, in the cluster for the NodePort defined. If not defined, it will choose a random available port, within a specific range. 
+We can define a service for our deployment. If you already have a cluster running in GKE, you can specify `type: LoadBalancer`, however on minikube you should use `NodePort`. This process executes iptables rules on every node, in the cluster for the NodePort defined. If not defined, it will choose a random available port, within a specific range. 
 
-On AKS, with `LoadBalancer` this will additionally configure an Azure Load Balancer attached to every node in your cluster, with traffic routed to this NodePort. You could then setup your DNS servers to point to that Load Balancer, for a complete setup.
+On GKE, with `LoadBalancer` this will additionally configure an GKE Load Balancer attached to every node in your cluster, with traffic routed to this NodePort. You could then setup your DNS servers to point to that Load Balancer, for a complete setup.
+
+TBD: Jonathan to verify GKE deployment below and change accordingly
 
 ```
 $ cat favorite-beer-service.yml

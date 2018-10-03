@@ -10,7 +10,9 @@ In unmanaged installations, its common to find these components running as conta
 
 These services correspond to the components we described earlier in this section.
 
-## AKS
+## GKE
+
+TBD: Jonathan to call out special GKE stuff here.  Then delete the AKS section below.
 
 In AKS, there are special services deployed to your cluster such as `omasagent`, `tunnelfront`, and `kube-svc-redirect`.
 

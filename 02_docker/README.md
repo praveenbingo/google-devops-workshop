@@ -3,6 +3,8 @@ This is the documentation for an **Introduction to Docker** for Redapt's "Docker
 
 by Jerry Meisner and Christoph Champ for Redapt, Inc. (August 2018)
 
+Modified by Jonathan Dawson for Redapt, Inc. (October 2018)
+
 **Docker** is an open-source project that automates the deployment of applications inside software containers.
 > Docker containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in. [Docker.com](https://www.docker.com/what-docker)
 

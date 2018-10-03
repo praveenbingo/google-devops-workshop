@@ -82,7 +82,7 @@ spec:
           claimName: example-local-claim
 ```
 
-### AKS
+### GKE
 Example StatefulSet:
 statefulset-example.yml
 ```

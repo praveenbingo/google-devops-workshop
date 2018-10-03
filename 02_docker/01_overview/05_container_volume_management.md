@@ -1,4 +1,4 @@
-# Container volume managment
+# Container volume management
 
 ```
 $ docker run -it --name voltest -v /mydata centos:latest /bin/bash

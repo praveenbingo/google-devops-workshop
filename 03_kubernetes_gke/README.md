@@ -1,6 +1,6 @@
 # Kubernetes
 
-Kubernetes (also known by its numeronym k8s) is an open source container cluster manager. Kubernetes' primary goal is to provide a platform for automating deployment, scaling, and operations of application containers across a cluster of hosts. Kubernetes was released by Google on July 2015.
+Kubernetes (also known by its synonym k8s) is an open source container cluster manager. Kubernetes' primary goal is to provide a platform for automating deployment, scaling, and operations of application containers across a cluster of hosts. Kubernetes was released by Google on July 2015.
 
 Latest stable release: v1.11.1 (2018-08-17)
 
@@ -13,9 +13,9 @@ Kubernetes is built through the definition of a set of components (building bloc
 
 These "primitives" are designed to be loosely coupled (i.e., where little to no knowledge of the other component definitions is needed to use) as well as easily extensible through an API. Both the internal components of Kubernetes as well as the extensions and containers make use of this API.
 
-## Managed Kubernetes (AKS)
+## Managed Kubernetes (GKE)
 
-In this workshop, we will discuss how to setup Kubernetes clusters via the Azure AKS service. In a managed cluster, many of the control-plane components are abstracted from the end-user. This means that Azure provides an SLA for the control-plane and leaves you to focus on deploying and managing your workloads.
+In this workshop, we will discuss how to setup Kubernetes clusters via the Google Kubernetes Engine (GKE). In a managed cluster, many of the control-plane components are abstracted from the end-user. This means that Google provides an SLA for the control-plane and leaves you to focus on deploying and managing your workloads.
 
 Because you won't have access to the nodes running etcd and the api, there are some customizations that may not be possible, at that level. 
 
@@ -36,7 +36,7 @@ Because you won't have access to the nodes running etcd and the api, there are s
    4. [Workloads](02_environment_strategies/04_workloads.md)
 3. [Standing up your First Cluster](03_standing_up_your_first_cluster)
    1. [Minikube (Local)](03_standing_up_your_first_cluster/01_minikube.md)
-   2. [AKS](03_standing_up_your_first_cluster/02_aks.md)
+   2. [EKS](03_standing_up_your_first_cluster/02_aks.md)
    3. [kubectl](03_standing_up_your_first_cluster/03_kubectl.md)
    4. [Labels, Selectors, and Annotations](03_standing_up_your_first_cluster/04_labels_selectors_annotations.md)
    5. [Private Repo Image Pull Secrets](03_standing_up_your_first_cluster/05_private_repo_image_pull_secrets.md)

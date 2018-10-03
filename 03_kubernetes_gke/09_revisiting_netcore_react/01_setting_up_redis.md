@@ -170,9 +170,11 @@ Notable Differences:
 2. In our set, we reference the claim in the volumes section, and then specify the path in our container to mount it to, in the volumeMounts section.
 2. Anti Affinity - Added to prevent collisions with local hostpaths for minikube users, but for AKS, it can help satisfy availability, requirements if the pods are not colocated. The caveat being, you will need to have at least as many nodes, as pods you desire in the stateful set. In minikube, this is a single node cluster.
 
-#### AKS
+#### GKE
 
-In AKS, we can store out data in a Premium Managed Disk really easily, with Dynamic Provisioning.
+TBD: Jonathan To verify GKE
+
+In GKE, we can store out data in a Premium Managed Disk really easily, with Dynamic Provisioning.
 
 ```
 $ cat favorite-beer-redis-statefulset.yml

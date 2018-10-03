@@ -17,4 +17,4 @@ There are certain aspects of your application that may be external, such as a da
 
 There are at least a couple of layers to consider when talking container security. The first rule of thumb is to never bake secrets or credentials into your builds, or store them in source control, where the builds are built from. If you did this, and someone got a hold of your image, they could simply `exec` into it, and read your credentials.
 
-The second priority should be on ensuring that packages and other plugins that you install, do not have their own security flaws. Tools like [Twistlock](https://www.twistlock.com/2016/11/07/azure-container-registry/) and [Aqua Security](https://blog.aquasec.com/image-vulnerability-scanning-in-azure-container-registry) support Azure container registry. There are also open source tools that integrate with most repositories like [Clair](https://github.com/coreos/clair).
+The second priority should be on ensuring that packages and other plugins that you install, do not have their own security flaws. The Google Container Registry includes in-depth vulnerability scanning (https://cloud.google.com/container-registry/)

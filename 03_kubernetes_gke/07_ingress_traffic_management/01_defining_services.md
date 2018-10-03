@@ -56,8 +56,9 @@ spec:
   type: NodePort
 ```
 
-__Example Service #3__: (Only works correctly with Cloud Provider K8s clusters such as AKS, not Minikube.)
+__Example Service #3__: (Only works correctly with Cloud Provider K8s clusters such as GKE, not Minikube.)
 
+TBD: Jonathan To Test this on GKE
 ```
 kind: Service
 apiVersion: v1

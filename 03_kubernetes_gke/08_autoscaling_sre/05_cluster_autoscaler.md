@@ -6,7 +6,9 @@ The cluster auto scaler is generally implemented by the IaaS provider, for cloud
 
 Sorry, there is no minikube equivalent for this level.
 
-## AKS
+## GKE
+
+TBD: Jonathan to verify GKE version and delete AKS below.
 
 For AKS, they have special instructions for deploying this to your cluster:
 https://docs.microsoft.com/en-us/azure/aks/autoscaler
