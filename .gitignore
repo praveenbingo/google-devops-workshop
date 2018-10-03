@@ -1,0 +1,3 @@
+*.DS_Store*
+2_kubernetes_aks/01_overview/data
+2_kubernetes_aks/01_overview/backup-data
