@@ -17,7 +17,7 @@ We will use the GCP GKE Console for this section. The equivalent terminal comman
 
 1. Log into the GCP Console
 
-	![Screen Shot 2018-10-08 at 11.39.29 AM](gke_images/Screen Shot 2018-10-08 at 11.39.29 AM.png)
+	![image14](gke_images/image-14.png)
 	
 2. Navigate to GKE Console
 
