@@ -8,7 +8,10 @@ Sorry, there is no minikube equivalent for this level.
 
 ## GKE
 
-TBD: Jonathan to verify GKE version and delete AKS below.
+- Automatically resizes clusters based on workload demand
+- Allows you to pay for only what you need at the moment (cost saving opportunity)
+- Be aware that when resources are deleted or moved during an autoscale event, your services may experience disruption.  Ensure that your code accounts for this!
+- **Caution**- Don't enable GCP Engine autoscaling for managed instance groups for your clusters nodes.  There will be issues as they are two seperate services.
 
-For AKS, they have special instructions for deploying this to your cluster:
-https://docs.microsoft.com/en-us/azure/aks/autoscaler
+
+Please refer to the official [GKE Cluster Autoscaler Documentation](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler) for specifics.
