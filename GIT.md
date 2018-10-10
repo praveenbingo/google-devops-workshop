@@ -2,7 +2,7 @@
 
 * Run the following commands on your laptop (locally):
 ```
-$ git clone git@github.com:redapt/microsoft-devops-workshop.git
+$ git clone git@github.com:redapt/google-devops-workshop.git
 $ cd microsoft-devops-workshop
 $ git pull --recurse-submodules
 $ git submodule update --init --recursive
