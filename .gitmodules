@@ -1,3 +1,9 @@
 [submodule "02_docker/03_containerization/examples/netcore-react"]
 	path = 02_docker/03_containerization/examples/netcore-react
 	url = https://github.com/redapt/favorite-beer
+[submodule "02_docker/03_containerization/examples/favorite-beer"]
+	path = 02_docker/03_containerization/examples/favorite-beer
+	url = git@github.com:redapt/favorite-beer.git
+[submodule "02_docker/03_containerization/examples/farvorite-beer"]
+	path = 02_docker/03_containerization/examples/farvorite-beer
+	url = git@github.com:redapt/favorite-beer.git
