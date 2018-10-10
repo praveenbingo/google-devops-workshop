@@ -12,10 +12,11 @@ These services correspond to the components we described earlier in this section
 
 ## GKE
 
-TBD: Jonathan to call out special GKE stuff here.  Then delete the AKS section below.
+In GKE, there are special services deployed to your cluster such as `fluentd`, `event-exporter`, `heapster`, `kubernetes-dashboard`, `l7-default-backend`, and `metrics-server`
 
-In AKS, there are special services deployed to your cluster such as `omasagent`, `tunnelfront`, and `kube-svc-redirect`.
-
-1. OMSAgent - This reports to the azure portal to provide diagnostic information, and for portal to communicate to your nodes.
-2. Tunnelfront - This is a service azure uses to facilitate communication between the managed control plane and the nodes in your cluster.
-3. kube-svc-redirect - This is service handles some additiona traffic redirection in the AKS environment.
+1. **fluentd** - Logging agent that works with stackdiver logging.  Used to collect logs from containers.
+2. **event-exporter** - Kubernetes events are objects that provide insight into what is happening inside a cluster, such as what decisions were made by scheduler or why some pods were evicted from the node. 
+3. **heapster** [**_Deprecated -- use metrics-server instead_**] - Heapster enables Container Cluster Monitoring and Performance Analysis for Kubernetes (versions v1.0.6 and higher), and platforms which include it. 
+4. **kubernetes-dashboard**- Legacy K8s Dashboard (optional)
+5. **l7-default-backend** - Ingress.  Provides layer 7 Load balancing.
+6. **metics-server** - Cluster-wide resource usage aggregator. Collects metrics from the Summary API, exposed by Kubelet on each node.

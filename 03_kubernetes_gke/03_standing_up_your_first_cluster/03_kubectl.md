@@ -7,8 +7,8 @@ For installation instructions see [installing kubectl](https://kubernetes.io/doc
 Check that `kubectl` is installed properly:
 ```
 $ kubectl version
-Client Version: version.Info{Major:"1", Minor:"11", GitVersion:"v1.11.2", GitCommit:"bb9ffb1654d4a729bb4cec18ff088eacc153c239", GitTreeState:"clean", BuildDate:"2018-08-07T23:17:28Z", GoVersion:"go1.10.3", Compiler:"gc", Platform:"linux/amd64"}
-Server Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.0", GitCommit:"fc32d2f3698e36b93322a3465f63a14e9f0eaead", GitTreeState:"clean", BuildDate:"2018-03-26T16:44:10Z", GoVersion:"go1.9.3", Compiler:"gc", Platform:"linux/amd64"}
+Client Version: version.Info{Major:"1", Minor:"10", GitVersion:"v1.10.7", GitCommit:"0c38c362511b20a098d7cd855f1314dad92c2780", GitTreeState:"clean", BuildDate:"2018-08-20T10:09:03Z", GoVersion:"go1.9.3", Compiler:"gc", Platform:"linux/amd64"}
+Server Version: version.Info{Major:"1", Minor:"10+", GitVersion:"v1.10.7-gke.2", GitCommit:"8d9503f982872112eb283f78cefc6944af640427", GitTreeState:"clean", BuildDate:"2018-09-13T22:19:55Z", GoVersion:"go1.9.3b4", Compiler:"gc", Platform:"linux/amd64"}
 ```
 
 ## Configure kubectl to connect to your Kubernetes cluster
