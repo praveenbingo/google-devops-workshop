@@ -168,13 +168,9 @@ Notable Differences:
 
 1. A PersistentVolume and a PVC were created, specifying a hostPath that we want to mount our data to on our minikube node. The claim will consume the volume, when it is created.
 2. In our set, we reference the claim in the volumes section, and then specify the path in our container to mount it to, in the volumeMounts section.
-2. Anti Affinity - Added to prevent collisions with local hostpaths for minikube users, but for AKS, it can help satisfy availability, requirements if the pods are not colocated. The caveat being, you will need to have at least as many nodes, as pods you desire in the stateful set. In minikube, this is a single node cluster.
+2. Anti Affinity - Added to prevent collisions with local hostpaths for minikube users, but for GKE, it can help satisfy availability, requirements if the pods are not colocated. The caveat being, you will need to have at least as many nodes, as pods you desire in the stateful set. In minikube, this is a single node cluster.
 
 #### GKE
-
-TBD: Jonathan To verify GKE
-
-In GKE, we can store out data in a Premium Managed Disk really easily, with Dynamic Provisioning.
 
 ```
 $ cat favorite-beer-redis-statefulset.yml
