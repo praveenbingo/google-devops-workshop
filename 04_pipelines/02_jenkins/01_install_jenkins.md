@@ -9,9 +9,7 @@ Lets take a moment to review `jenkins-values.minikube.yml` and/or `jenkins-value
 **Minikube** Exposed as NodePort
 `helm upgrade --install jenkins stable/jenkins -f jenkins-values.minikube.yml`
 
-TBD: Jonathan to change for GKE
-
-**AKS** Exposed as LoadBalancer
+**GKE** Exposed as LoadBalancer
 `helm upgrade --install jenkins stable/jenkins -f jenkins-values.aks.yml`
 
 If you experience issues, you can roll back by deleting the release.
