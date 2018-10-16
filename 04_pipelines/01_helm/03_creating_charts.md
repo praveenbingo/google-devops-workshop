@@ -31,8 +31,8 @@ To use the default values:
 helm upgrade --install beer Chart --set image.tag=v1 --namespace=default
 ```
 
-You can target the denver-values using this command:
+You can target the overstock-values using this command:
 ```
-helm upgrade --install denver Chart -f denver-values.yaml --set image.tag=v1 --namespace=default
+helm upgrade --install overstock Chart -f overstock-values.yaml --set image.tag=v1 --namespace=default
 ```
 

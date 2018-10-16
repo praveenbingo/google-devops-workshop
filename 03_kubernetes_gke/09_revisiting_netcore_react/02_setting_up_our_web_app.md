@@ -163,7 +163,6 @@ We can define a service for our deployment. If you already have a cluster runnin
 
 On GKE, with `LoadBalancer` this will additionally configure an GKE Load Balancer attached to every node in your cluster, with traffic routed to this NodePort. You could then setup your DNS servers to point to that Load Balancer, for a complete setup.
 
-TBD: Jonathan to verify GKE deployment below and change accordingly
 
 ```
 $ cat favorite-beer-service.yml

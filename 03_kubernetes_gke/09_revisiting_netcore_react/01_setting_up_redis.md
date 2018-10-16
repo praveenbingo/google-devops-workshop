@@ -203,7 +203,6 @@ spec:
   - metadata:
       name: redis-data
     spec:
-      storageClassName: managed-premium
       accessModes: [ "ReadWriteOnce" ]
       resources:
         requests:
@@ -214,11 +213,11 @@ $ kubectl apply -f favorite-beer-redis-statefulset.yml
 
 Notable Differences:
 
-1. In our set, we have specified a volumeClaimTemplate that will tell the AKS cloud provider, to create a Managed Disk and attach it to designated nodes for each pod that is created. We reference the claim template name and mount it to our containers data path, in the volumeMounts section.
+1. In our set, we have specified a volumeClaimTemplate that will tell the GKE cloud provider, to create a Managed Disk and attach it to designated nodes for each pod that is created. We reference the claim template name and mount it to our containers data path, in the volumeMounts section.
 
 ## Exposing this StatefulSet
 
-Since this is a service that recieve traffic internally or otherwise over the net, we will need to expose an endpoint. This is where the Kubernetes `Service` comes into play. As you may remember, when we were discussing the primitives there are 3 types of services each more complex than the last, building up to `LoadBalancer`.
+Since this is a service that receives traffic internally or otherwise over the net, we will need to expose an endpoint. This is where the Kubernetes `Service` comes into play. As you may remember, when we were discussing the primitives there are 3 types of services each more complex than the last, building up to `LoadBalancer`.
 
 We can define a service for our stateful set, and in this case we will choose `type: ClusterIP`. Applying this resource to our cluster, will create an internal (To the kubernetes cluster) ip that can be reached via the service name. We don't have any need to access our redis instance, outside of services running on Kubernetes, so no need to go further.
 
