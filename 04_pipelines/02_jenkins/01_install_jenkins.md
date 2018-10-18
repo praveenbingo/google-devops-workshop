@@ -4,7 +4,7 @@ Assuming helm is installed locally and on to your cluster, we can use that to de
 
 `cd examples`
 
-Lets take a moment to review `jenkins-values.minikube.yml` and/or `jenkins-values.aks.yml`
+Lets take a moment to review `jenkins-values.minikube.yml` and/or `jenkins-values.gke.yml`
 
 **Minikube** Exposed as NodePort
 `helm upgrade --install jenkins stable/jenkins -f jenkins-values.minikube.yml`
