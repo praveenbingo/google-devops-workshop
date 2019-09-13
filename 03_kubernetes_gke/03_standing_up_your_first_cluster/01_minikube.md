@@ -152,3 +152,15 @@ $ APISERVER=$(kubectl config view | awk '/https/{print $2}')
 ```
 $ curl -k -H "Authorization: Bearer ${TOKEN}" ${APISERVER}
 ```
+
+## Using Minikube as a local Docker registry
+
+Sometimes it is useful to have a local Docker registry for Kubernetes to pull images from. As the Minikube [README](https://github.com/kubernetes/minikube/blob/0c616a6b42b28a1aab8397f5a9061f8ebbd9f3d9/README.md#reusing-the-docker-daemon) describes, you can reuse the Docker daemon running within Minikube with `eval $(minikube docker-env)` to build and pull images from.
+
+To use an image without uploading it to some external resgistry (e.g., Docker Hub), you can follow these steps:
+* Set the environment variables with `eval $(minikube docker-env)`
+* Build the image with the Docker daemon of Minikube (e.g., `docker build -t my-image .`)
+* Set the image in the pod spec like the build tag (e.g., `my-image`)
+* Set the `imagePullPolicy` to `Never`, otherwise Kubernetes will try to download the image.
+
+Important note: You have to run `eval $(minikube docker-env)` on each terminal you want to use since it only sets the environment variables for the current shell session.
