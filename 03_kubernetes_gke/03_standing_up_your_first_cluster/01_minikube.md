@@ -4,14 +4,14 @@
 
 * Install Minikube:
 ```
-$ curl -Lo minikube <nowiki>https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64</nowiki> \
-    && chmod +x minikube && sudo mv minikube /usr/local/bin/
+$ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64 \
+  && chmod +x minikube && sudo mv minikube /usr/local/bin/
 ```
 
 * Install kubectl (note: we go into greater detail on kubectl in an [upcoming section](03_kubectl.md)):
 ```
-$ curl -Lo kubectl <nowiki>https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl</nowiki> \
-    && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
+$ curl -Lo kubectl https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl \
+  && chmod +x kubectl && sudo mv kubectl /usr/local/bin/
 ```
 
 * Test install:
