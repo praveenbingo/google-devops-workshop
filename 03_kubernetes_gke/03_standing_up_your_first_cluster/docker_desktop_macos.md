@@ -134,3 +134,5 @@ user-agent=curl/7.54.0
 BODY:
 -no body in request-
 ```
+
+Your Kubernetes cluster running inside Docker Desktop for macos has been successfully completed!
