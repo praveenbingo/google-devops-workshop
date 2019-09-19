@@ -18,6 +18,12 @@ Server Version: version.Info{Major:"1", Minor:"14", GitVersion:"v1.14.6", GitCom
 
 * Check which context your kubeconfig is currently using/set to:
 ```
+$ kubectl config current-context
+docker-desktop
+```
+
+* Check all kubeconfig settings:
+```
 $ kubectl config view
 apiVersion: v1
 clusters:
