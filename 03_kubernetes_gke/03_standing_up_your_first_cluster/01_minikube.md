@@ -66,7 +66,7 @@ $ kubectl expose deployment hello-minikube --type=NodePort
 service/hello-minikube exposed
 ```
 
-We have now launched an "echos erver" Pod, but we have to wait until the Pod is up before curling/accessing it via the exposed Service.
+We have now launched an "echo server" Pod, but we have to wait until the Pod is up before curling/accessing it via the exposed Service.
 
 * To check whether the Pod is up and running, we can use the following:
 ```
