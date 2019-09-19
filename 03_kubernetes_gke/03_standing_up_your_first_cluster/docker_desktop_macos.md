@@ -135,4 +135,13 @@ BODY:
 -no body in request-
 ```
 
+* Cleanup:
+```
+$ kubectl delete service echo-server
+service "echo-server" deleted
+
+$ kubectl delete deployment echo-server
+deployment.extensions "echo-server" deleted
+```
+
 Your Kubernetes cluster running inside Docker Desktop for macos has been successfully completed!
