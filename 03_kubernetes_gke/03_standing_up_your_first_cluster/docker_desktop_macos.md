@@ -71,3 +71,65 @@ kube-system   kube-controller-manager-docker-desktop   1/1     Running   0      
 kube-system   kube-proxy-dsjth                         1/1     Running   0          14m
 kube-system   kube-scheduler-docker-desktop            1/1     Running   0          13m
 ```
+
+## Deploy an app to Kubernetes running on Docker Desktop
+
+* Create a Deployment of an "echo server":
+```
+$ kubectl run echo-server --image=k8s.gcr.io/echoserver:1.4 --port=8080
+deployment.apps/echo-server created
+```
+
+* Check status of Deployment:
+```
+$ kubectl get all --selector='run=echo-server'
+NAME                               READY   STATUS    RESTARTS   AGE
+pod/echo-server-685b5c54b9-8p2pl   1/1     Running   0          8m45s
+
+NAME                  TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+service/echo-server   NodePort   10.104.183.233   <none>        8080:30670/TCP   8m9s
+
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+deployment.apps/echo-server   1/1     1            1           8m45s
+
+NAME                                     DESIRED   CURRENT   READY   AGE
+replicaset.apps/echo-server-685b5c54b9   1         1         1       8m45s
+```
+
+* Expose the Deployment by creating a Service (of type `NodePort`):
+```
+$ kubectl expose deployment echo-server --type=NodePort
+service/echo-server exposed
+```
+
+* Check on status of Services:
+$ kubectl get services
+
+NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
+echo-server   NodePort    10.104.183.233   <none>        8080:30670/TCP   22s
+kubernetes    ClusterIP   10.96.0.1        <none>        443/TCP          62m
+```
+
+Note the  port assigned to our `echo-server` Service (i.e., port `30670`).
+
+* We should now be able to submit a GET request to our `echo-server`:
+```
+$ curl localhost:30670
+CLIENT VALUES:
+client_address=192.168.65.3
+command=GET
+real path=/
+query=nil
+request_version=1.1
+request_uri=http://localhost:8080/
+
+SERVER VALUES:
+server_version=nginx: 1.10.0 - lua: 10001
+
+HEADERS RECEIVED:
+accept=*/*
+host=localhost:30670
+user-agent=curl/7.54.0
+BODY:
+-no body in request-
+```
