@@ -102,7 +102,8 @@ $ kubectl expose deployment echo-server --type=NodePort
 service/echo-server exposed
 ```
 
-* Check on status of Services:
+* Check on status of our Kubernetes Services:
+```
 $ kubectl get services
 
 NAME          TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
@@ -110,7 +111,7 @@ echo-server   NodePort    10.104.183.233   <none>        8080:30670/TCP   22s
 kubernetes    ClusterIP   10.96.0.1        <none>        443/TCP          62m
 ```
 
-Note the  port assigned to our `echo-server` Service (i.e., port `30670`).
+Note the port assigned to our `echo-server` Service (i.e., port `30670`).
 
 * We should now be able to submit a GET request to our `echo-server`:
 ```
