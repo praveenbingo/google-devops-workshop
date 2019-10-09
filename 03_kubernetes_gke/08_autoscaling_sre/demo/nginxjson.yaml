@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginxjson-deployment
+  labels:
+    app: nginxjson
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginxjson
+  template:
+    metadata:
+      labels:
+        app: nginxjson
+    spec:
+      containers:
+      - name: nginxjson
+        image: redaptcloud/nginx-jsonlog:latest
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginxjson
+spec:
+  selector:
+    app: nginxjson
+  ports:
+    - protocol: TCP
+      port: 80
